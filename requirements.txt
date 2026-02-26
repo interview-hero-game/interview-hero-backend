@@ -1,0 +1,9 @@
+fastapi>=0.115.8,<1.0
+uvicorn[standard]>=0.34.0,<1.0
+python-multipart>=0.0.20,<1.0
+google-genai>=0.0.1,<1.0
+python-dotenv>=1.0.1,<2.0
+motor>=3.7.0,<4.0
+pydantic>=2.10.6,<3.0
+transformers>=4.48.3,<5.0
+torch>=2.9.0,<3.0
