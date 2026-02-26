@@ -14,6 +14,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from google import genai
 from pydantic import BaseModel
+import uvicorn
 
 from database import DatabaseManager
 from levels import (
@@ -483,3 +484,8 @@ async def process_answer(request: ProcessAnswerRequest):
         "hero_name": hero_name,
         "life_lesson": life_lesson,
     }
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
